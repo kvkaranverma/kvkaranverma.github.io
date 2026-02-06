@@ -8,7 +8,7 @@ type HeroProps = {
 export function Hero({ cv }: HeroProps) {
   return (
     <header className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.55)]">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         {/* Left: Identity */}
         <div>
           <h1 className="text-3xl font-bold tracking-tight">
@@ -24,7 +24,7 @@ export function Hero({ cv }: HeroProps) {
           </p>
 
           {/* Contact */}
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-white/70">
+          <div className="mt-3 flex flex-col gap-2 text-sm text-white/70 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-2">
             <span>📍 {cv.basics.location}</span>
             <span>📞 {cv.basics.phone}</span>
             <span>✉ {cv.basics.email}</span>
@@ -32,7 +32,7 @@ export function Hero({ cv }: HeroProps) {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 sm:justify-end">
           {cv.basics.links.map((link) => (
             <ButtonLink
               key={link.url}
