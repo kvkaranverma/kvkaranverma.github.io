@@ -32,7 +32,7 @@ export function Hero({ cv }: HeroProps) {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex flex-wrap gap-2 sm:justify-end">
+        <div className="print-hidden flex flex-wrap gap-2 sm:justify-end">
           {cv.basics.links.map((link) => (
             <ButtonLink
               key={link.url}

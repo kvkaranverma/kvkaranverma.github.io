@@ -1,12 +1,52 @@
 @import "tailwindcss";
 
+/* ================================
+   PRINT STYLES (PDF Export)
+================================ */
 @media print {
-  html,
+  /* Force white page */
   body {
     background: white !important;
+    color: black !important;
   }
-  .break-inside-avoid-page {
-    break-inside: avoid;
-    page-break-inside: avoid;
+
+  /* Remove dark background wrapper */
+  .bg-\[\#0b1020\] {
+    background: white !important;
+  }
+
+  /* Make all text readable */
+  * {
+    color: black !important;
+    text-shadow: none !important;
+  }
+
+  /* Remove glass card effects */
+  .rounded-2xl,
+  .rounded-3xl {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove chip styling */
+  span {
+    background: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  /* Hide buttons in print */
+  button,
+  a[href*="github"],
+  a[href*="linkedin"],
+  a[href*="Resume"],
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* Fix spacing */
+  section {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
