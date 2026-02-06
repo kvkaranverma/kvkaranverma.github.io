@@ -41,6 +41,14 @@ export function Hero({ cv }: HeroProps) {
             />
           ))}
 
+          <a
+            href="/Karan-Verma-Resume.pdf"
+            download
+            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 hover:bg-white/10 transition-colors"
+            >
+            Download PDF
+          </a>
+
           <button
             onClick={() => window.print()}
             className="inline-flex items-center justify-center rounded-full border border-violet-400/40 bg-violet-500/15 px-4 py-2 text-sm text-white/90 hover:bg-violet-500/25 print:hidden"
