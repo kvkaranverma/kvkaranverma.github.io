@@ -11,6 +11,7 @@ import { OpenToCard } from "../components/cv/OpenToCard";
 import { SkillsCard } from "../components/cv/SkillsCard";
 
 
+
 export default function CvPage() {
   return (
     <div className="min-h-screen bg-[#0b1020] text-white">
