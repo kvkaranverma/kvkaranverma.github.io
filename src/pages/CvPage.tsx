@@ -8,6 +8,7 @@ import { AchievementsCard } from "../components/cv/AchievementsCard";
 import { EducationCard } from "../components/cv/EducationCard";
 import { InterestsCard } from "../components/cv/InterestsCard";
 import { OpenToCard } from "../components/cv/OpenToCard";
+import { SkillsCard } from "../components/cv/SkillsCard";
 
 
 export default function CvPage() {
@@ -18,6 +19,10 @@ export default function CvPage() {
 
         <Section title="Professional Summary">
           <SummaryCard summary={cv.summary} />
+        </Section>
+
+        <Section title="Core Skills">
+            <SkillsCard skills={cv.skills} />
         </Section>
 
         <Section title="Professional Experience">
