@@ -38,15 +38,16 @@ export type Cv = {
 
   skills: {
     frontend: string[];
-    backend: string[];
     styling: string[];
     architecture: string[];
-    cloud: string[];
-    qualitySecurity: string[];
-    analytics: string[];
-    collaboration: string[];
-    uiTooling: string[];
-    buildTooling: string[];
+    tools: string[];
+    backend?: string[];
+    cloud?: string[];
+    qualitySecurity?: string[];
+    analytics?: string[];
+    collaboration?: string[];
+    uiTooling?: string[];
+    buildTooling?: string[];
   };
 
   experience: CvExperience[];
@@ -84,66 +85,67 @@ export const cv: Cv = {
     "Senior Software Engineer with 7+ years at CatalystOne Solutions, progressing from intern to senior engineer and core contributor. Specialized in modern frontend architecture, large-scale UI modernization, and design-system evolution within complex monolithic applications. Strong focus on design tokens, dynamic theming, accessibility, performance, and long-term maintainability. Known for solving deep technical problems while balancing usability, developer experience, and enterprise scalability.",
 
   skills: {
-    frontend: ["React.js", "TypeScript", "Angular", "JavaScript (ES6+)", "HTML", "CSS"],
+    frontend: ["React.js", "TypeScript", "JavaScript (ES6+)", "Angular (Legacy)"],
 
     backend: ["Java", "REST APIs", "Database (working proficiency)"],
 
     styling: [
-      "SCSS Architecture",
-      "CSS Variables",
+      "SCSS",
       "Design Tokens",
+      "CSS Variables",
       "Responsive UI",
-      "Accessible UI (A11y)",
+      "Accessibility (A11y)"
     ],
 
     architecture: [
       "Design Systems",
       "Component Libraries",
-      "Feature-flag-driven Development",
-      "Legacy Modernization Strategy",
-      "Runtime Theming & Incremental Rollouts",
+      "Feature-flags",
+      "UI Modernization",
     ],
 
-    cloud: [
-      "Microsoft Azure (enterprise production exposure)",
-      "Azure Monitor (diagnostics & performance insights)",
-      "Azure CDN (static asset delivery optimization)",
+    tools: [
+      "Azure",
+      "Amplitude Analytics",
+      "Storybook",
+      "GitHub",
+      "Jira"
     ],
 
     qualitySecurity: [
-      "Secure Development Practices",
-      "Vulnerability Identification",
-      "Security Champion Responsibilities",
-      "Code Quality & Maintainability",
+      // "Secure Development Practices",
+      // "Vulnerability Identification",
+      // "Security Champion Responsibilities",
+      // "Code Quality & Maintainability",
     ],
 
     analytics: [
-      "Amplitude Event Tracking",
-      "Funnels & Dashboards",
-      "Product Reporting & Insights",
+      // "Amplitude Event Tracking",
+      // "Funnels & Dashboards",
+      // "Product Reporting & Insights",
     ],
 
     collaboration: [
-      "Cross-team Enablement",
-      "Mentoring Engineers",
-      "Developer Experience Improvements",
-      "Agile Sprint Execution",
+      // "Cross-team Enablement",
+      // "Mentoring Engineers",
+      // "Developer Experience Improvements",
+      // "Agile Sprint Execution",
     ],
 
     uiTooling: [
-      "Figma (design collaboration)",
-      "Material UI (MUI) Theming & Customization",
-      "Storybook (component documentation)",
-      "Chrome DevTools (profiling & debugging)",
-      "Memory Leak Analysis",
+      // "Figma (design collaboration)",
+      // "Material UI (MUI) Theming & Customization",
+      // "Storybook (component documentation)",
+      // "Chrome DevTools (profiling & debugging)",
+      // "Memory Leak Analysis",
     ],
 
     buildTooling: [
-      "Webpack / Vite",
-      "Gradle-based Monolith Tooling",
-      "ConfigCat Feature Flags",
-      "GitHub PR Reviews",
-      "Jira + Confluence Documentation",
+      // "Webpack / Vite",
+      // "Gradle-based Monolith Tooling",
+      // "ConfigCat Feature Flags",
+      // "GitHub PR Reviews",
+      // "Jira + Confluence Documentation",
     ],
   },
 

@@ -1,42 +1,43 @@
-import type { Cv } from "../../content/cv";
 import { Card } from "../ui/Card";
 import { Chip } from "../ui/Chip";
 
-type SkillsCardProps = {
-  cv: Cv;
+type SkillGroupProps = {
+  label: string;
+  items: string[];
 };
 
-function SkillGroup({ label, items }: { label: string; items: string[] }) {
+function SkillGroup({ label, items }: SkillGroupProps) {
   return (
-    <div className="mt-4 first:mt-0">
-      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-white/70">
+    <div className="space-y-2">
+      <h4 className="text-xs font-semibold tracking-widest text-white/60 uppercase">
         {label}
-      </div>
+      </h4>
 
-      <div className="flex flex-wrap gap-2">
-        {items.map((s) => (
-          <Chip key={s}>{s}</Chip>
+      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+        {items.map((skill) => (
+          <Chip key={skill}>{skill}</Chip>
         ))}
       </div>
     </div>
   );
 }
 
-export function SkillsCard({ cv }: SkillsCardProps) {
-  const { skills } = cv;
+type SkillsCardProps = {
+  skills: {
+    frontend: string[];
+    styling: string[];
+    architecture: string[];
+    tools: string[];
+  };
+};
 
+export function SkillsCard({ skills }: SkillsCardProps) {
   return (
-    <Card>
+    <Card className="text-left space-y-6 break-inside-avoid-page">
       <SkillGroup label="Frontend" items={skills.frontend} />
-      <SkillGroup label="Backend" items={skills.backend} />
-      <SkillGroup label="Styling & UI Architecture" items={skills.styling} />
+      <SkillGroup label="Styling & Design Systems" items={skills.styling} />
       <SkillGroup label="Architecture" items={skills.architecture} />
-      <SkillGroup label="Cloud & Platform" items={skills.cloud} />
-      <SkillGroup label="Quality & Security" items={skills.qualitySecurity} />
-      <SkillGroup label="Product Analytics" items={skills.analytics} />
-      <SkillGroup label="Collaboration" items={skills.collaboration} />
-      <SkillGroup label="UI / Frontend Tools" items={skills.uiTooling} />
-      <SkillGroup label="Build & Dev Experience" items={skills.buildTooling} />
+      <SkillGroup label="Tools & Platform" items={skills.tools} />
     </Card>
   );
 }

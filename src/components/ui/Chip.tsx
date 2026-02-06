@@ -3,16 +3,9 @@ type ChipProps = {
   className?: string;
 };
 
-export function Chip({ children, className = "" }: ChipProps) {
+export function Chip({ children }: { children: React.ReactNode }) {
   return (
-    <span
-      className={[
-        "inline-flex items-center rounded-full",
-        "border border-white/15 bg-white/5",
-        "px-3 py-1 text-sm text-white/85",
-        className,
-      ].join(" ")}
-    >
+    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-white/80">
       {children}
     </span>
   );
