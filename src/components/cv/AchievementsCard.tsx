@@ -14,7 +14,7 @@ export function AchievementsCard({ item }: AchievementsCardProps) {
         </h3>
       </div>
 
-      <ul className="mt-3 list-disc list-outside space-y-1.5 pl-4 text-left text-sm leading-relaxed text-white/80">
+      <ul className="mt-3 list-disc space-y-1 pl-4 text-left text-sm text-white/75">
         {item.points.map((point) => (
           <li key={point}>{point}</li>
         ))}

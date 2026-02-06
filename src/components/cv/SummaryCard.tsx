@@ -7,7 +7,7 @@ type SummaryCardProps = {
 export function SummaryCard({ summary }: SummaryCardProps) {
   return (
     <Card>
-      <p className="leading-relaxed text-left text-white/85">{summary}</p>
+      <p className="max-w-3xl text-left leading-relaxed text-white/85">{summary}</p>
     </Card>
   );
 }

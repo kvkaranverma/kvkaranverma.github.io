@@ -12,11 +12,11 @@ export function EducationCard({ education }: EducationCardProps) {
         {education.degree}
       </h3>
 
-      <p className="mt-1 text-sm text-white/70">{education.field}</p>
+      <p className="mt-1 text-sm text-white/75">{education.field}</p>
 
-      {education.institute && education.institute !== "—" ? (
-        <p className="mt-1 text-sm text-white/70">{education.institute}</p>
-      ) : null}
+      <p className="mt-2 text-sm text-white/60">
+        {education.institute} • {education.year}
+      </p>
     </Card>
   );
 }

@@ -20,6 +20,7 @@ export type CvEducation = {
   degree: string;
   field: string;
   institute: string;
+  year: string;
 };
 
 export type Cv = {
@@ -222,7 +223,8 @@ export const cv: Cv = {
   education: {
     degree: "Master of Computer Applications (MCA)",
     field: "Computer Science",
-    institute: "—",
+    institute: "Kurukshetra University",
+    year: "2019",
   },
 
   interests: [
