@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@media print {
+  html,
+  body {
+    background: white !important;
+  }
+  .break-inside-avoid-page {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
