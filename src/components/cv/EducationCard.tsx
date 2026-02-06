@@ -7,16 +7,16 @@ type EducationCardProps = {
 
 export function EducationCard({ education }: EducationCardProps) {
   return (
-    <Card>
-      <p className="font-semibold">{education.degree}</p>
+    <Card className="text-left break-inside-avoid-page">
+      <h3 className="text-lg font-semibold tracking-tight leading-snug">
+        {education.degree}
+      </h3>
 
-      <p className="mt-1 text-sm text-white/70">
-        {education.field}
-      </p>
+      <p className="mt-1 text-sm text-white/70">{education.field}</p>
 
-      <p className="mt-1 text-sm text-white/70">
-        {education.institute}
-      </p>
+      {education.institute && education.institute !== "—" ? (
+        <p className="mt-1 text-sm text-white/70">{education.institute}</p>
+      ) : null}
     </Card>
   );
 }

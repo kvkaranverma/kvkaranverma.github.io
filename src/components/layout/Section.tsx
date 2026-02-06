@@ -8,7 +8,7 @@ export function Section({ title, children }: SectionProps) {
     <section className="mt-6">
       {/* Section heading row */}
       <div className="mb-3 flex items-center gap-3">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
           {title}
         </h2>
 

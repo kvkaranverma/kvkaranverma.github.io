@@ -7,22 +7,23 @@ type ExperienceCardProps = {
 
 export function ExperienceCard({ exp }: ExperienceCardProps) {
   return (
-    <Card>
-      {/* Header row */}
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h3 className="text-lg font-semibold tracking-tight">{exp.role}</h3>
-          <p className="mt-1 text-sm font-medium text-white/60">{exp.company}</p>
+    <Card className="text-left break-inside-avoid-page">
+      <div className="flex flex-wrap items-start justify-between gap-3 text-left">
+        <div className="flex flex-col gap-0.5">
+          <h3 className="text-lg font-semibold tracking-tight leading-snug">
+            {exp.role}
+          </h3>
+          <p className="text-sm font-normal text-white/60 leading-snug">
+            {exp.company}
+          </p>
         </div>
 
-        {/* Date pill */}
         <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-white/60">
           {exp.start} – {exp.end}
         </div>
       </div>
 
-      {/* Bullet highlights */}
-      <ul className="mt-3 list-disc list-outside space-y-2 pl-4 text-left text-sm leading-relaxed text-white/80">
+      <ul className="mt-3 list-disc list-outside space-y-1.5 pl-4 text-left text-sm leading-relaxed text-white/80">
         {exp.highlights.map((point) => (
           <li key={point}>{point}</li>
         ))}

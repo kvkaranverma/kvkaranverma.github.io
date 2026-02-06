@@ -6,8 +6,8 @@ type InterestsCardProps = {
 
 export function InterestsCard({ interests }: InterestsCardProps) {
   return (
-    <Card>
-      <ul className="list-disc space-y-1 list-outside text-left pl-5 text-white/85">
+    <Card className="text-left break-inside-avoid-page">
+      <ul className="list-disc list-outside space-y-1.5 pl-4 text-left text-sm leading-relaxed text-white/80">
         {interests.map((interest) => (
           <li key={interest}>{interest}</li>
         ))}
