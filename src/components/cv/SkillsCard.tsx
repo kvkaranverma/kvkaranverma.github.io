@@ -37,7 +37,7 @@ export function SkillsCard({ skills }: SkillsCardProps) {
     <Card className="text-left space-y-6 break-inside-avoid-page">
       <SkillGroup label="Frontend" items={skills.frontend} />
       <SkillGroup label="Styling & Design Systems" items={skills.styling} />
-      <SkillGroup label="Tools & Platform" items={skills.ai} />
+      <SkillGroup label="AI & Intelligent Systems" items={skills.ai} />
       <SkillGroup label="Architecture" items={skills.architecture} />
       <SkillGroup label="Tools & Platform" items={skills.tools} />
     </Card>
