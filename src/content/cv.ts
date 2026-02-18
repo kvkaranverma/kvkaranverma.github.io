@@ -41,6 +41,7 @@ export type Cv = {
     styling: string[];
     architecture: string[];
     tools: string[];
+    ai: string[];
     backend?: string[];
     cloud?: string[];
     qualitySecurity?: string[];
@@ -110,6 +111,13 @@ export const cv: Cv = {
       "Storybook",
       "GitHub",
       "Jira"
+    ],
+
+    ai: [
+      "Azure AI Services",
+      "Generative AI",
+      "GitHub Copilot",
+      "Agentic Workflows (AI-assisted feature development and automation)"
     ],
 
     qualitySecurity: [
